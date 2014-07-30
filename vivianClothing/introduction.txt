@@ -1,0 +1,9 @@
+Detail
+
+Technology Used
+1.SQL Server 2012
+2.Asp.net MVC4 razor
+3.jQuery
+4.CSS
+5.DBML ?? 
+
