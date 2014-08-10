@@ -4,14 +4,14 @@
     ViewBag.Title = "Complete";
 }
 
-<h2>Complete</h2>
+<h2>結帳</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>OrderHeader</legend>
+        <legend>請輸入遞送地址</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.ContactName)
@@ -37,13 +37,6 @@
             @Html.ValidationMessageFor(model => model.ContactAddress)
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.TotalPrice)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.TotalPrice)
-            @Html.ValidationMessageFor(model => model.TotalPrice)
-        </div>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.memo)
@@ -53,22 +46,16 @@
             @Html.ValidationMessageFor(model => model.memo)
         </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.BuyOn)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.BuyOn)
-            @Html.ValidationMessageFor(model => model.BuyOn)
-        </div>
+      
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="完成訂單" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("回首頁", "Index","Home")
 </div>
 
 @section Scripts {

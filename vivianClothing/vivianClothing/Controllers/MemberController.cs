@@ -17,13 +17,16 @@ namespace vivianClothing.Controllers
         {
             return View();
         }
-        // 寫入會員資料
+       
         
+        // 寫入會員資料        
         [HttpPost]
         public ActionResult Register([Bind(Exclude="RigisterOn,AuthCode")] Member Member)
         {
             return View();
         }
+        
+        
         // 顯示會員登入頁面
         public ActionResult Login(string returnUrl)
         {
