@@ -1,0 +1,61 @@
+﻿@model vivianClothing.Models.Product
+@{ 
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "AddToCartSuccess",
+        OnFailure = "AddToCartFailure",
+        HttpMethod = "post"
+    };  
+ }
+@section script{
+    @Scripts.Render("~/bundles/jqueryval")
+       <script>
+           function AddToCartSuccess() {
+               alert('加入購物車成功');
+           }
+           function AddToCartFailure(xhr) {
+               alert('加入購物車失敗 (http status code:' + xhr.status + ')');
+
+           }
+       </script>
+    }
+@{
+    ViewBag.Title = "ProductDetail";
+}
+
+<h2>您正在檢視[@Model.Name]商品</h2>
+
+<fieldset>
+    <legend>Product</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PublishOn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PublishOn)
+    </div>
+</fieldset>
+<p>
+    @Ajax.ActionLink("加入購物車","AddToCart","Cart",ajaxOption)
+</p>

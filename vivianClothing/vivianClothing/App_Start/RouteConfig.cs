@@ -19,7 +19,7 @@ namespace vivianClothing
                 defaults: new
                 {
                     controller = "Home",
-                    action = "Index",
+                    action = "Index", 
                     id = UrlParameter.Optional
                 }
                // , constraints: new { Controller = "Home", Action = "Upload" }

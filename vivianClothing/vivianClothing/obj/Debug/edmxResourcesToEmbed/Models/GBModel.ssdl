@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GuestBookModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="GuestBookModelStoreContainer">
+    <EntitySet Name="GB" EntityType="GuestBookModel.Store.GB" store:Type="Tables" />
+  </EntityContainer>
+  <EntityType Name="GB">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="Content" Type="nvarchar" Nullable="false" MaxLength="500" />
+    <Property Name="PostTime" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema>

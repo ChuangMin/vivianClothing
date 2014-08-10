@@ -1,0 +1,73 @@
+﻿@model List<vivianClothing.Models.Cart>
+@{ 
+    var ajaxOption = new AjaxOptions()
+    {
+        OnSuccess = "RemoveCartSuccess",
+        OnFailure = "RemoveCartFailure",
+        Confirm = "你確定從購物車移除這個商品嗎?",
+        HttpMethod = "post"
+    };    
+ }
+@section script{
+    @Scripts.Render("~/bundles/jqueryval")
+       <script>
+           function RemoveCartSuccess() {
+               alert('移除購物車成功');
+               location.reload();
+           }
+           function RemoveCartFailure(xhr) {
+               alert('移除購物車失敗 (http status code:' + xhr.status + ')');
+           }
+       </script>
+    }
+ 
+<h2>購物車清單</h2>
+
+@using (Html.BeginForm("UpdateAmount", "Cart"))
+{ 
+   <table> 
+       <tr>
+           <th>產品名稱</th>
+           <th>單價</th>
+           <th>數量</th>
+           <th>小計</th>
+           <th></th>
+       </tr>
+       @{int subTotal = 0;}
+       @for (int i = 0; i < Model.Count; i++)
+			{
+			    //計算購買商品總價
+                subTotal += Model[i].Product.Price * Model[i].Amount; 
+           
+                //選擇商品數量的選單只能選擇1~10
+                var ddlAmountList = new SelectList(Enumerable.Range(1, 10), Model[i].Amount);
+           
+                @Html.HiddenFor(modelItem => Model[i].Product.Id)
+               <tr>
+                   <td>@Html.DisplayFor(modelItem => Model[i].Product.Name)</td>
+                   <td>NT$ @(Model[i].Product.Price</td>
+                   <td>@Html.DropDownListFor(modelItem => Model[i].Amount,ddlAmountList)</td>
+                   <td>NT$ @(Model[i].Product.Price * Model[i].Amount</td>
+                   <td>
+                       @Ajax.ActionLink("刪除", "Remove", new { ProductId=Model[i].Product.Id },ajaxOption)
+                   </td>
+               </tr>
+            }
+       <tr>
+           <th></th>
+           <th></th>
+           <th>總價</th>
+           <th id="subtotal">NT$ @subTotal</th>
+           <th></th>
+       </tr>          
+			
+
+   </table>
+
+    <p>
+        <input type="submit" value="更新數量" />
+        <input type="button" value="完成訂單" 
+            onclick="location.href = '@Url.Action("Complete","Order")';" />
+    </p>
+}
+

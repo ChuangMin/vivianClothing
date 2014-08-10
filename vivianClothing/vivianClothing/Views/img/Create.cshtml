@@ -1,0 +1,68 @@
+﻿@model vivianClothing.Views.Gusetbook.img
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>img</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.filename)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.filename)
+            @Html.ValidationMessageFor(model => model.filename)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.filepath)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.filepath)
+            @Html.ValidationMessageFor(model => model.filepath)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.displayname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.displayname)
+            @Html.ValidationMessageFor(model => model.displayname)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.description)
+            @Html.ValidationMessageFor(model => model.description)
+        </div>
+
+         <div class="editor-label">
+            uploadimg
+        </div>
+        <div class="editor-field">
+          @using (Html.BeginForm("upload", "file", FormMethod.Post, new { enctype = "multipart/form-data" }))
+          { @Html.TextBox("File1", "", new {type ="file",size="30" }) }
+          </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
