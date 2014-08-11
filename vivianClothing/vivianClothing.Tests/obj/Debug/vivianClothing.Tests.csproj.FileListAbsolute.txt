@@ -50,16 +50,6 @@ C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivia
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\DotNetOpenAuth.OAuth.xml
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\DotNetOpenAuth.OpenId.RelyingParty.xml
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\DotNetOpenAuth.OpenId.xml
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Net.Http.Formatting.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.Helpers.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.Http.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.Http.WebHost.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.Mvc.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.Razor.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.WebPages.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.WebPages.Deployment.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.WebPages.Razor.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.Http.OData.resources.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\de\Microsoft.Data.Edm.resources.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\es\Microsoft.Data.Edm.resources.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\fr\Microsoft.Data.Edm.resources.dll
@@ -87,9 +77,6 @@ C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivia
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\ru\System.Spatial.resources.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hans\System.Spatial.resources.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Spatial.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\EntityFramework.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\System.Web.Optimization.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\zh-Hant\Microsoft.Web.WebPages.OAuth.resources.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\obj\Debug\vivianClothing.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\obj\Debug\vivianClothing.Tests.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\obj\Debug\vivianClothing.Tests.pdb
@@ -188,3 +175,5 @@ C:\Users\ChuangMin\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClo
 C:\Users\ChuangMin\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\obj\Debug\vivianClothing.Tests.csprojResolveAssemblyReference.cache
 C:\Users\ChuangMin\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\obj\Debug\vivianClothing.Tests.dll
 C:\Users\ChuangMin\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\obj\Debug\vivianClothing.Tests.pdb
+C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\PagedList.dll
+C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing.Tests\bin\Debug\PagedList.xml
