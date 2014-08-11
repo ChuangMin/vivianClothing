@@ -17,7 +17,7 @@ namespace vivianClothing.Models
 
         [DisplayName("訂購會員")]
         [Required]
-        public Member Member { get; set; }
+        public virtual Member Member { get; set; }
 
         [DisplayName("收件人姓名")]
         [Required(ErrorMessage = "請輸入收件人姓名")]
@@ -54,5 +54,8 @@ namespace vivianClothing.Models
             get { return this.Member.Name + "於" + this.BuyOn + "訂購的商品"; }
         }
 
+        public virtual ICollection<OrderDetail> OrderDetailItems { get; set; }
+
+        //public virtual Member Member { get; set; }
     }
 }

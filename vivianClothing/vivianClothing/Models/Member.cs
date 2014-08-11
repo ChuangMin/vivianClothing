@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Drawing;
@@ -20,6 +21,7 @@ namespace vivianClothing.Models
         [Description("我們將會以您的E-mail作為登入帳號")]
         [MaxLength(250,ErrorMessage="不能超過250個字")]
         [DataType(DataType.EmailAddress)]
+        [Remote("CheckDup","Member",HttpMethod="post",ErrorMessage="您輸入的Email已經有人註冊過了")]
         public string Email { get; set; }
 
 
@@ -44,6 +46,6 @@ namespace vivianClothing.Models
         [MaxLength(36)]
         public string AutoCode { get; set; }
 
-
+        public virtual ICollection<OrderHeader> Orders { get; set; }
     }
 }

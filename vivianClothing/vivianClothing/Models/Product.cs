@@ -17,7 +17,7 @@ namespace vivianClothing.Models
 
         [DisplayName("商品類別")]
         [Required]
-        public ProductCategory ProductCategory { get; set; }
+        public virtual ProductCategory ProductCategory { get; set; }
 
         [DisplayName("商品名稱")]
         [Required(ErrorMessage = "請輸入商品名稱")]
@@ -40,7 +40,9 @@ namespace vivianClothing.Models
 
         [DisplayName("上架時間")]
         [Description ("如果沒有設定時間代表不上架")]
-        public DateTime? PublishOn { get; set; } 
+        public DateTime? PublishOn { get; set; }
+
+       // public virtual ProductCategory ProductCategory { get; set; }
 
     }
 }
