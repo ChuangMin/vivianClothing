@@ -4,6 +4,19 @@
     ViewBag.Title = "Index";
 }
 
+@*<script type="text/javascript" >
+    $(function () {
+        debugger
+        $.getJSON("http://localhost:3285/api/Products/GetProduct/1",
+            function () {
+                $.each(data, function (key, val) {
+                    var str = val.ProductName + ' : ' + val.UnitPrice;
+                    $('<li>', { html: str }).appendTo($('#products'));
+                });
+            });
+        });
+    
+</script>*@
 
 @*<div class="row visible-print">
 
@@ -79,6 +92,7 @@
                         </h5>
                         <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
                             <span class="label label-danger" itemprop="price">£2,249.00</span>
+                            <span class="label label-danger" itemprop="price">加入購物車</span>
                         </div>
                     </div>
                 </div>
@@ -112,7 +126,6 @@
                 Back to top
             </a>
         </p>
-
         <div class="panel">
             <div class="panel-heading">
             <h4>@Html.DisplayNameFor(model => model[0]) Clothing</h4>
@@ -124,10 +137,9 @@
                          <span class="badge">3</span>
                         Shorts - Baggies
                       </a> *@
+                     
                       @Html.ActionLink(item.Name, "ProductList", new { id = item.Id }, new { @class = "list-group-item" })
-
-                }
-              
+                }     
                 <a class="list-group-item" href="/categories/overshoes">
                 <span class="badge">2</span>
                 Overshoes
@@ -180,15 +192,12 @@
         </div>
 
         <p class="visible-sm">
-        <a href="#">
-        <i class="glyphicon glyphicon-arrow-up"></i>
-        Back to top
-        </a>
+            <a href="#">
+                <i class="glyphicon glyphicon-arrow-up"></i>
+                Back to top
+            </a>
         </p>
-
-        
-
-    </div>
+</div>
 
 </div>
 

@@ -1,0 +1,192 @@
+﻿@model List<vivianClothing.Models.ProductCategory>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@*<div class="row visible-print">
+
+    <div class="col col-sm-3">
+    <img alt="The Vivian Shop" src="//dqz60m88mff11.cloudfront.net/assets/thehublogo-c3f31a6b7407e3c1020b6e1ae1df5db7.png">
+    </div>
+
+    <div class="col col-sm-9">
+        <div class="row">
+        <div class="col col-sm-6">
+        <p>
+        01303 210 311
+        <br>
+        www.thehubcycleshop.co.uk
+        <br>
+        info@thehubcycleshop.co.uk
+        </p>
+        </div>
+        <div class="col col-sm-6">
+        <p>
+        61 - 63 Sandgate High St
+        <br>
+        Sandgate, Folkestone
+        <br>
+        CT20 3AH
+        </p>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col col-sm-12">
+        <p>
+        <strong>Mon - Sat</strong>
+        9:30 am - 5:30 pm
+        <strong>Sunday</strong>
+        10:00 am - 4:00 pm
+        </p>
+        </div>
+        </div>
+        </div>
+
+</div>*@
+
+
+<div class="row">
+
+    <div class="col col-lg-9 col-push-3">
+
+    <div class="jumbotron">
+    <h1>Welcome to The Vivian</h1>
+    <p>
+        104 資訊科技法務部蘇先生表示，此案最初於 2002 年由 104 人力銀行負責人楊基寬發向公平會舉發，同時向台北地方法院提起民事與刑事求償。當年首度開庭後判決 1111人力銀行四位員工侵犯著作權法，需負刑事責任，各判刑6個月，共同賠償 104 人力銀行 72 萬元。後因主動認罪，另 104 方面不認為為員工責任而答應和解。
+
+民事部份耗時12年，2009 年時判決 1111人力銀
+    </p>
+    </div>
+
+    <div class="row">
+       
+
+        @for (int i = 0; i < 6; i++)
+        {
+            <div class="col col-lg-4 col-sm-6">
+                <div class="thumbnail" itemscope="" itemtype="http://schema.org/Product">
+                    <a href="/brands/giant/products/anthem-27-dot-5-1-2014" title="Giant Anthem 27.5 1 2014">
+                        <img alt="Anthem 27.5 1 2014" itemprop="image" style="width: 255px;" src="//dqz60m88mff11.cloudfront.net/products/839/medium.png?1381759163">
+                    </a>
+                    <div class="caption">
+                        <h5 class="ellipsis">
+                            <a href="/brands/giant/products/anthem-27-dot-5-1-2014" itemprop="url" title="Giant Anthem 27.5 1 2014">
+                            <span itemprop="brand">Giant</span>
+                            <span itemprop="name">Anthem 27.5 1 2014</span>
+                            </a>
+                        </h5>
+                        <div itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                            <span class="label label-danger" itemprop="price">£2,249.00</span>
+                            <span class="label label-danger" itemprop="price">加入購物車</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+   
+    </div>
+
+
+    @*<div class="visible-print">
+    © 2014 The Hub Cycle Shop
+    </div>*@
+
+</div>
+
+
+    
+@*<h2>@Html.DisplayNameFor(model => model[0])</h2>*@
+
+@*<ul>
+    @foreach (var item in Model)
+    {
+        <li>@Html.ActionLink(item.Name, "ProductList", new {id = item.Id })</li>
+    }
+</ul>*@
+
+<div class="col col-lg-3 col-pull-9 sidebar hidden-print">
+        <p class="visible-sm" id="clothing">
+            <a href="#">
+                <i class="glyphicon glyphicon-arrow-up"></i>
+                Back to top
+            </a>
+        </p>
+        <div class="panel">
+            <div class="panel-heading">
+            <h4>@Html.DisplayNameFor(model => model[0]) Clothing</h4>
+            </div>
+            <div class="list-group list-group-flush">
+                 @foreach (var item in Model)
+                {
+                      @*<a class="list-group-item" href="/categories/shorts-baggies">
+                         <span class="badge">3</span>
+                        Shorts - Baggies
+                      </a> *@
+                     
+                      @Html.ActionLink(item.Name, "ProductList", new { id = item.Id }, new { @class = "list-group-item" })
+                }     
+                <a class="list-group-item" href="/categories/overshoes">
+                <span class="badge">2</span>
+                Overshoes
+                </a>
+                <a class="list-group-item" href="/categories/jackets">
+                <span class="badge">1</span>
+                Jackets
+                </a>
+                <a class="list-group-item" href="/categories/gloves-mens">
+                <span class="badge">2</span>
+                Gloves (Men's)
+                </a>
+                <a class="list-group-item" href="/categories/gloves-womens">
+                <span class="badge">1</span>
+                Gloves (Women's)
+                </a>
+                <a class="list-group-item" href="/categories/base-layers">
+                <span class="badge">3</span>
+                Base Layers
+                </a>
+                <a class="list-group-item" href="/categories/warmers">
+                <span class="badge">1</span>
+                Warmers
+                </a>
+                <a class="list-group-item" href="/categories/bib-shorts">
+                <span class="badge">2</span>
+                Bib shorts
+                </a>
+                <a class="list-group-item" href="/categories/eyewear">
+                <span class="badge">2</span>
+                Eyewear
+                </a>
+                <a class="list-group-item" href="/categories/water-proof-leg-wear">
+                <span class="badge">1</span>
+                Water proof leg wear
+                </a>
+                <a class="list-group-item" href="/categories/gilets">
+                <span class="badge">2</span>
+                Gilets
+                </a>
+                <a class="list-group-item" href="/categories/leggings-lycra">
+                <span class="badge">2</span>
+                Leggings - Lycra
+                </a>
+                <a class="list-group-item" href="/categories/jerseys">
+                <span class="badge">2</span>
+                Jerseys
+                </a>
+            </div>
+        </div>
+
+        <p class="visible-sm">
+            <a href="#">
+                <i class="glyphicon glyphicon-arrow-up"></i>
+                Back to top
+            </a>
+        </p>
+</div>
+
+</div>
+
+
+
