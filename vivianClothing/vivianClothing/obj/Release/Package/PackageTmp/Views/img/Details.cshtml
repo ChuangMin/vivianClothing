@@ -1,0 +1,43 @@
+﻿@model vivianClothing.Views.Gusetbook.img
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>img</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.filename)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.filename)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.filepath)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.filepath)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.displayname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.displayname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
