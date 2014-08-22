@@ -4,6 +4,8 @@
     ViewBag.Title = "Index";
 }
 
+@Styles.Render("~/Content/PhotoSlide.css")
+
 @*<script type="text/javascript" >
     $(function () {
         debugger
@@ -66,11 +68,24 @@
 
     <div class="jumbotron">
     <h1>Welcome to The Vivian</h1>
-    <p>
-        104 資訊科技法務部蘇先生表示，此案最初於 2002 年由 104 人力銀行負責人楊基寬發向公平會舉發，同時向台北地方法院提起民事與刑事求償。當年首度開庭後判決 1111人力銀行四位員工侵犯著作權法，需負刑事責任，各判刑6個月，共同賠償 104 人力銀行 72 萬元。後因主動認罪，另 104 方面不認為為員工責任而答應和解。
+        <div class="example-pager"></div>
+           <div class="cycle-slideshow" 
+            data-cycle-fx=scrollHorz
+            data-cycle-timeout=4000
+            data-cycle-pager=".example-pager"
+            >
 
-民事部份耗時12年，2009 年時判決 1111人力銀
-    </p>
+            <!-- empty element for pager links -->
+            <div class="cycle-pager"></div>
+
+            
+                <img src="Images/powerbar.png" style="width:700px;height:500px;">    
+                <img src="Images/ABC.png">
+                <img src="Images/bac.png">
+                <img src="Images/disney.png">
+                <img src="Images/ibeacon.png">      
+        </div>
+             <div class="cycle-pager"></div>
     </div>
 
     <div class="row">

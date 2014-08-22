@@ -1,0 +1,14 @@
+﻿
+.example-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
+    }
+.example-pager span { 
+    font-family: arial; font-size: 50px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.example-pager span.cycle-pager-active { color: #D69746;}
+.example-pager > * { cursor: pointer;}
+
+
+
+
