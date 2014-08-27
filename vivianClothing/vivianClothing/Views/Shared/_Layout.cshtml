@@ -8,8 +8,7 @@
         <meta name="viewport" content="width=device-width" />
          @Styles.Render("~/Content/PagedList.css")
         @Styles.Render("~/Content/bootstrap.css")
-       @*  @Styles.Render("~/Content/css")
-         @Scripts.Render("~/bundles/modernizr")*@
+
     </head>
     <body>
         <header>
@@ -26,9 +25,11 @@
                     </div>
                     <div class="collapse navbar-collapse">
                       <ul class="nav navbar-nav">
-                        <li class="active">@Html.ActionLink("首頁", "Index", "Home")</li>
-                        <li><li>@Html.ActionLink("購物車", "Index", "Cart")</li></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li class="active">@Html.ActionLink("首頁", "Index", "Home",new { @class="glyphicon glyphicon-heart" })</li>
+                        <li>@Html.ActionLink("會員中心", "Index", "Cart",new { @class="glyphicon glyphicon-heart" })</li>
+                        <li>@Html.ActionLink("購物流程", "Index", "Cart",new { @class="glyphicon glyphicon-heart" })</li>
+                        <li>@Html.ActionLink("訂單查詢", "Index", "Cart",new { @class="glyphicon glyphicon-heart" })</li>
+                        <li>@Html.ActionLink("客服", "Index", "Cart",new { @class="glyphicon glyphicon-heart" })</li>
                       </ul>
                     </div><!-- /.nav-collapse -->
                   </div><!-- /.container -->
@@ -118,12 +119,18 @@
                 <div class="float-left">
                     <p>&copy; @DateTime.Now.Year - Vivian 小舖</p>
                 </div>
-            </div>*@
-        </footer>
+            </div>
+            </footer>*@
+            
+    
 
         @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/Scripts/bootstrap.js")
         @Scripts.Render("~/Scripts/jquery.cycle2.js")
+        @Scripts.Render("~/Scripts/3DHoverEffects/jquery.hoverfold.js")
+
+       
         @RenderSection("scripts", required: false)
     </body>
 </html>

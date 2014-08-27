@@ -5,19 +5,32 @@
 }
 
 @Styles.Render("~/Content/PhotoSlide.css")
+@Styles.Render("~/Content/3DHoverEffects/demo.css")
+@Styles.Render("~/Content/3DHoverEffects/style_common.css")
+@Styles.Render("~/Content/3DHoverEffects/style2.css")
 
-@*<script type="text/javascript" >
-    $(function () {
-        $.getJSON("http://localhost:3285/api/Products/GetProduct/1",
-            function () {
-                $.each(data, function (key, val) {
-                    var str = val.ProductName + ' : ' + val.UnitPrice;
-                    $('<li>', { html: str }).appendTo($('#products'));
-                });
-            });
-        });
-    
-</script>*@
+
+
+<div id="content" class="bs-docs-header">
+      <div class="container">
+        <h1>52SH</h1>
+        <p>簡介</p>
+      
+      </div>
+    </div>
+
+
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+                  <div class="container">
+                    <div class="collapse navbar-collapse">
+                      <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("新品上市", "Index", "Cart")</li>
+                        <li>@Html.ActionLink("熱銷商品", "Index", "Cart")</li>  
+                        <li>@Html.ActionLink("限時特價", "Index", "Cart")</li>
+                      </ul>
+                    </div><!-- /.nav-collapse -->
+                  </div><!-- /.container -->
+                </div>
 
 @*<div class="row visible-print">
 
@@ -60,6 +73,7 @@
 
 </div>*@
 
+@*熱銷*@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -99,6 +113,7 @@
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 
+@*限時搶購*@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
@@ -151,48 +166,106 @@
 
 <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
                   <div class="container">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Vivian 小舖</a>
-                    </div>
                     <div class="collapse navbar-collapse">
                       <ul class="nav navbar-nav">
-                        <li class="active">@Html.ActionLink("首頁", "Index", "Home")</li>
-                        <li><li>@Html.ActionLink("購物車", "Index", "Cart")</li></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li>@Html.ActionLink("上身", "Index", "Cart")</li>
+                        <li>@Html.ActionLink("下身", "Index", "Cart")</li>  
+                        <li>@Html.ActionLink("洋裝", "Index", "Cart")</li>
+                        <li>@Html.ActionLink("內/泳衣", "Index", "Cart")</li>
+                        <li>@Html.ActionLink("鞋/包", "Index", "Cart")</li>
+                        <li>@Html.ActionLink("配件", "Index", "Cart")</li>
+                        <li>@Html.ActionLink("全", "Index", "Cart")</li>
                       </ul>
                     </div><!-- /.nav-collapse -->
                   </div><!-- /.container -->
-                </div>
+               
+    
+    
+    
+</div>
 
+<div id="grid" class="main" style="width: 1050px;overflow:visible"; >
+				<div class="view">
+					<div class="view-back">
+						<span data-icon="A">566</span>
+						<span data-icon="B">124</span>
+						<a href="http://www.flickr.com/photos/ag2r/5033654303/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/5.jpg" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span data-icon="A">210</span>
+						<span data-icon="B">102</span>
+						<a href="http://www.flickr.com/photos/ag2r/4846704157/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/6.jpg" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span data-icon="A">690</span>
+						<span data-icon="B">361</span>
+						<a href="http://www.flickr.com/photos/ag2r/5439506585/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/1.jpg" />
+				</div>
+				<div class="view">
+					<div class="view-back">
+						<span data-icon="A">987</span>
+						<span data-icon="B">130</span>
+						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/3.jpg" />
+				</div>
+    <div class="view">
+					<div class="view-back">
+						<span data-icon="A">987</span>
+						<span data-icon="B">130</span>
+						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/3.jpg" />
+				</div>
+    <div class="view">
+					<div class="view-back">
+						<span data-icon="A">987</span>
+						<span data-icon="B">130</span>
+						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/3.jpg" />
+				</div>
+    <div class="view">
+					<div class="view-back">
+						<span data-icon="A">987</span>
+						<span data-icon="B">130</span>
+						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/3.jpg" />
+				</div>
+    <div class="view">
+					<div class="view-back">
+						<span data-icon="A">987</span>
+						<span data-icon="B">130</span>
+						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/3.jpg" />
+				</div>
+     <div class="view">
+					<div class="view-back">
+						<span data-icon="A">987</span>
+						<span data-icon="B">130</span>
+						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
+					</div>
+					<img src="~/Images/3DHoverEffects/3.jpg" />
+				</div>
+			</div>
 
+        @section scripts{
+            @Scripts.Render("~/Scripts/3DHoverEffects/jquery.hoverfold.js")
+            <script>
+                $('#grid').hoverfold();
+            </script>
+        }
 
-@for (int i = 0; i < 3; i++)
-{
-  <div class="row">
-        <div class="col-lg-4">
-          <h2>Safari bug warning!</h2>
-          <p class="text-danger">As of v7.0.1, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing.</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
-        </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
-       </div>
-        <div class="col-lg-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-          <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
-        </div>
-      </div>  
-}
 
 
 

@@ -219,6 +219,16 @@
     <Compile Include="Views\Gusetbook\img.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\3DHoverEffects\demo.css" />
+    <Content Include="Content\3DHoverEffects\fallback.css" />
+    <Content Include="Content\3DHoverEffects\fonts\icons.svg" />
+    <Content Include="Content\3DHoverEffects\normalize.css" />
+    <Content Include="Content\3DHoverEffects\style1.css" />
+    <Content Include="Content\3DHoverEffects\style2.css" />
+    <Content Include="Content\3DHoverEffects\style3.css" />
+    <Content Include="Content\3DHoverEffects\style4.css" />
+    <Content Include="Content\3DHoverEffects\style5.css" />
+    <Content Include="Content\3DHoverEffects\style_common.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -286,9 +296,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\3DHoverEffects\fonts\icons.eot" />
+    <Content Include="Content\3DHoverEffects\fonts\icons.ttf" />
+    <Content Include="Content\3DHoverEffects\fonts\icons.woff" />
     <None Include="Properties\PublishProfiles\vivian.pubxml" />
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
+    <Content Include="Images\3DHoverEffects\1.jpg" />
+    <Content Include="Images\3DHoverEffects\2.jpg" />
+    <Content Include="Images\3DHoverEffects\3.jpg" />
+    <Content Include="Images\3DHoverEffects\4.jpg" />
+    <Content Include="Images\3DHoverEffects\5.jpg" />
+    <Content Include="Images\3DHoverEffects\6.jpg" />
+    <Content Include="Images\3DHoverEffects\7.jpg" />
+    <Content Include="Images\3DHoverEffects\AttributionsImages.txt" />
+    <Content Include="Images\3DHoverEffects\bg.jpg" />
+    <Content Include="Images\4001936093picture_557276.jpg" />
     <Content Include="Images\medium.png" />
+    <Content Include="Scripts\3DHoverEffects\jquery.hoverfold.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.0.js" />
