@@ -72,8 +72,7 @@ namespace vivianClothing.Controllers
             if (productCategory!= null)
             {
                 var data = productCategory.Products.ToList();
-               
-               
+                           
                 var pagedData = data.ToPagedList(pageNumber: p, pageSize: 10);
                 return View(pagedData);
             }
@@ -106,24 +105,5 @@ namespace vivianClothing.Controllers
 
             return View(data);
         }
-
-
-
-        public ActionResult GetJsonData(int id)//,int p =1)
-        {
-
-            var productCategory = db.ProductCategories.Find(id);
-            var data = productCategory.Products.ToList();
-
-           // return Json(data, JsonRequestBehavior.AllowGet); 
-            return Json(
-                         data.Select(x => new {
-                         id = x.Id,
-                         name = x.Name,
-                         price = x.Price
-                        })); 
-            
-        }
-
     }
 }

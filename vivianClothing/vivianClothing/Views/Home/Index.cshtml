@@ -269,18 +269,41 @@
 
                 //TODO: problem not solve
                 //get product list
+                //$('#btnGetPersons').click(function () {
+                //    $.ajax({
+                //        url: 'api/ProductCategory/', type: "GET", dataType: "json",
+                //        data: {
+                //            id: 1 //$('#POCId').val()                   
+                //        },
+                //        success: function (data) {
+                //            $.each(data, function (i, itemvalue) {
+                //                console.log(i +" "+ itemvalue);
+                //                //$("#city").append(
+                //                //        $("<option></option>").val(i).html(itemvalue.Text))
+                //            });
+                //        },
+                //        error: function () {
+                       
+                //        }
+                //    });
+                //});
+
                 $('#btnGetPersons').click(function () {
-                    $.getJSON("/Home/GetJsonData/1", function (data) {
+                    $.getJSON("api/ProductCategory/1", function (data) {
                         var items = [];
                         $.each(data, function (key, val) {
-                            items.push("<li id='" + key + "'>" + val + "</li>");
+                      
+                                items.push("<li id='" + key + "'>" + val + "</li>");
+                      
+                            
                         });
                         $("<ul/>", {
                             "class": "my-new-list",
                             html: items.join("")
-                        }).appendTo("grid");
+                        }).appendTo("body");
                     });
                 });
+
             </script>
         }
 

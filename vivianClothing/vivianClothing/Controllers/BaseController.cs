@@ -10,7 +10,7 @@ namespace vivianClothing.Controllers
     public class BaseController : Controller
     {
        protected VivianclothingContext db = new VivianclothingContext();
-
+      
        protected List<Cart> Carts
         {
             get
