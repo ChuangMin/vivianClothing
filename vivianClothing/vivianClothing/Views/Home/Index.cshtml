@@ -175,6 +175,7 @@
                         <li>@Html.ActionLink("鞋/包", "Index", "Cart")</li>
                         <li>@Html.ActionLink("配件", "Index", "Cart")</li>
                         <li>@Html.ActionLink("全", "Index", "Cart")</li>
+                        <li> <input id="btnGetPersons" type="button" value="button" /></li>
                       </ul>
                     </div><!-- /.nav-collapse -->
                   </div><!-- /.container -->
@@ -262,7 +263,24 @@
         @section scripts{
             @Scripts.Render("~/Scripts/3DHoverEffects/jquery.hoverfold.js")
             <script>
+                //3D
                 $('#grid').hoverfold();
+
+
+                //TODO: problem not solve
+                //get product list
+                $('#btnGetPersons').click(function () {
+                    $.getJSON("/Home/GetJsonData/1", function (data) {
+                        var items = [];
+                        $.each(data, function (key, val) {
+                            items.push("<li id='" + key + "'>" + val + "</li>");
+                        });
+                        $("<ul/>", {
+                            "class": "my-new-list",
+                            html: items.join("")
+                        }).appendTo("grid");
+                    });
+                });
             </script>
         }
 

@@ -72,43 +72,8 @@ namespace vivianClothing.Controllers
             if (productCategory!= null)
             {
                 var data = productCategory.Products.ToList();
-                #if DEBUG
-                if (data.Count == 0 )
-                {
-                    //TODO: fake data
-                    //var productCategory = new ProductCategory() { Id = id, Name = "類別 " + id };
-                    //var data = new List<Product>()
-                    //{new Product(){Id=1, ProductCategory =productCategory, Name = "原子筆",Description="N/A",Price = 30, PublishOn = DateTime.Now, Color = Color.Black},
-                    //new Product(){Id=1, ProductCategory =productCategory, Name = "鉛筆", Description="N/A",Price = 5, PublishOn = DateTime.Now, Color = Color.Black}
-                    //};
-
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品1", Color = Color.Red, Description = "N/A", Price =99, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品2", Color = Color.Blue, Description = "N/A", Price =150, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品3", Color = Color.Blue, Description = "N/A", Price = 151, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品4", Color = Color.Blue, Description = "N/A", Price = 152, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品5", Color = Color.Blue, Description = "N/A", Price = 153, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品6", Color = Color.Blue, Description = "N/A", Price = 154, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品7", Color = Color.Blue, Description = "N/A", Price = 155, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品8", Color = Color.Blue, Description = "N/A", Price = 156, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品9", Color = Color.Blue, Description = "N/A", Price = 157, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品10", Color = Color.Blue, Description = "N/A", Price = 158, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品11", Color = Color.Blue, Description = "N/A", Price = 159, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品12", Color = Color.Blue, Description = "N/A", Price = 160, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品13", Color = Color.Blue, Description = "N/A", Price = 151, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品14", Color = Color.Blue, Description = "N/A", Price = 152, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品15", Color = Color.Blue, Description = "N/A", Price = 153, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品16", Color = Color.Blue, Description = "N/A", Price = 154, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品17", Color = Color.Blue, Description = "N/A", Price = 155, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品18", Color = Color.Blue, Description = "N/A", Price = 156, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品19", Color = Color.Blue, Description = "N/A", Price = 157, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品20", Color = Color.Blue, Description = "N/A", Price = 158, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品21", Color = Color.Blue, Description = "N/A", Price = 159, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    productCategory.Products.Add(new Product() { Name = productCategory.Name + "類別下的商品22", Color = Color.Blue, Description = "N/A", Price = 160, PublishOn = DateTime.Now, ProductCategory = productCategory });
-                    db.SaveChanges();
-
-                    data = productCategory.Products.ToList();
-                }
-                #endif
+               
+               
                 var pagedData = data.ToPagedList(pageNumber: p, pageSize: 10);
                 return View(pagedData);
             }
@@ -120,7 +85,7 @@ namespace vivianClothing.Controllers
         }
         
         //商品明細
-        public ActionResult ProductDetail(int id)
+        public ActionResult ProductDetail(int id )
         {
             //TODO: testData
             //var productCategory = new ProductCategory() { 
@@ -141,5 +106,24 @@ namespace vivianClothing.Controllers
 
             return View(data);
         }
+
+
+
+        public ActionResult GetJsonData(int id)//,int p =1)
+        {
+
+            var productCategory = db.ProductCategories.Find(id);
+            var data = productCategory.Products.ToList();
+
+           // return Json(data, JsonRequestBehavior.AllowGet); 
+            return Json(
+                         data.Select(x => new {
+                         id = x.Id,
+                         name = x.Name,
+                         price = x.Price
+                        })); 
+            
+        }
+
     }
 }
