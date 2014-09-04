@@ -168,15 +168,14 @@
                   <div class="container">
                     <div class="collapse navbar-collapse">
                       <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("上身", "Index", "Cart")</li>
-                        <li>@Html.ActionLink("下身", "Index", "Cart")</li>  
-                        <li>@Html.ActionLink("洋裝", "Index", "Cart")</li>
-                        <li>@Html.ActionLink("內/泳衣", "Index", "Cart")</li>
-                        <li>@Html.ActionLink("鞋/包", "Index", "Cart")</li>
-                        <li>@Html.ActionLink("配件", "Index", "Cart")</li>
-                        <li>@Html.ActionLink("全", "Index", "Cart")</li>
-                        <li> <input id="btnGetPersons" type="button" value="button" /></li>
-                      </ul>
+                          <li><a href="javascript:void(0);" onclick="getProductlist(1);">上身</a></li>
+                          <li><a href="javascript:void(0);" onclick="getProductlist(2);">下身</a></li>
+                          <li><a href="javascript:void(0);" onclick="getProductlist(3);">洋裝</a></li>
+                          <li><a href="javascript:void(0);" onclick="getProductlist(4);">內/泳衣</a></li>
+                          <li><a href="javascript:void(0);" onclick="getProductlist(5);">鞋/包</a></li>
+                          <li><a href="javascript:void(0);" onclick="getProductlist(6);">配件</a></li>
+                          <li><a href="javascript:void(0);" onclick="getProductlist(7);">全</a></li>
+                     </ul>
                     </div><!-- /.nav-collapse -->
                   </div><!-- /.container -->
                
@@ -186,124 +185,50 @@
 </div>
 
 <div id="grid" class="main" style="width: 1050px;overflow:visible"; >
-				<div class="view">
-					<div class="view-back">
-						<span data-icon="A">566</span>
-						<span data-icon="B">124</span>
-						<a href="http://www.flickr.com/photos/ag2r/5033654303/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/5.jpg" />
-				</div>
-				<div class="view">
-					<div class="view-back">
-						<span data-icon="A">210</span>
-						<span data-icon="B">102</span>
-						<a href="http://www.flickr.com/photos/ag2r/4846704157/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/6.jpg" />
-				</div>
-				<div class="view">
-					<div class="view-back">
-						<span data-icon="A">690</span>
-						<span data-icon="B">361</span>
-						<a href="http://www.flickr.com/photos/ag2r/5439506585/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/1.jpg" />
-				</div>
-				<div class="view">
-					<div class="view-back">
-						<span data-icon="A">987</span>
-						<span data-icon="B">130</span>
-						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/3.jpg" />
-				</div>
-    <div class="view">
-					<div class="view-back">
-						<span data-icon="A">987</span>
-						<span data-icon="B">130</span>
-						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/3.jpg" />
-				</div>
-    <div class="view">
-					<div class="view-back">
-						<span data-icon="A">987</span>
-						<span data-icon="B">130</span>
-						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/3.jpg" />
-				</div>
-    <div class="view">
-					<div class="view-back">
-						<span data-icon="A">987</span>
-						<span data-icon="B">130</span>
-						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/3.jpg" />
-				</div>
-    <div class="view">
-					<div class="view-back">
-						<span data-icon="A">987</span>
-						<span data-icon="B">130</span>
-						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/3.jpg" />
-				</div>
-     <div class="view">
-					<div class="view-back">
-						<span data-icon="A">987</span>
-						<span data-icon="B">130</span>
-						<a href="http://www.flickr.com/photos/ag2r/6271521984/in/photostream">&rarr;</a>
-					</div>
-					<img src="~/Images/3DHoverEffects/3.jpg" />
-				</div>
-			</div>
+				
+
+</div>
 
         @section scripts{
             @Scripts.Render("~/Scripts/3DHoverEffects/jquery.hoverfold.js")
             <script>
-                //3D
-                $('#grid').hoverfold();
+                
+                function init() {
+                    //init hot sell nav
+                    //init hot sell slide
+                    //init limit time sell nav
+                    //init limit time sell slide
+                    //init product list nav
+                    //init product list 
+                    getProductlist(1);
+                }
 
-
-                //TODO: problem not solve
-                //get product list
-                //$('#btnGetPersons').click(function () {
-                //    $.ajax({
-                //        url: 'api/ProductCategory/', type: "GET", dataType: "json",
-                //        data: {
-                //            id: 1 //$('#POCId').val()                   
-                //        },
-                //        success: function (data) {
-                //            $.each(data, function (i, itemvalue) {
-                //                console.log(i +" "+ itemvalue);
-                //                //$("#city").append(
-                //                //        $("<option></option>").val(i).html(itemvalue.Text))
-                //            });
-                //        },
-                //        error: function () {
-                       
-                //        }
-                //    });
-                //});
-
-                $('#btnGetPersons').click(function () {
-                    $.getJSON("api/ProductCategory/1", function (data) {
+                function getProductlist(id) {               
+                    //clear
+                    $('#grid').empty();
+                    //get data and fillin 
+                    $.getJSON("api/ProductCategory/"+id, function (data) {
                         var items = [];
-                        $.each(data, function (key, val) {
-                      
-                                items.push("<li id='" + key + "'>" + val + "</li>");
-                      
-                            
-                        });
-                        $("<ul/>", {
-                            "class": "my-new-list",
-                            html: items.join("")
-                        }).appendTo("body");
+                        //TODO:replace for (var i = 0; i < data.Products.length; i++) { 
+                        for (var i = 0; i < 9; i++) {
+                           items.push("<div class='view'>" +
+                                           "<div class='view-back'>" +
+                                           "<span data-icon='A'> Name: " + data.Products[i]["Name"] + "</span>" +
+                                           "<span data-icon='B'> Price :" + data.Products[i]["Price"] + "</span>" +
+                                           "<a href='http://www.flickr.com/photos/ag2r/6271521984/in/photostream'>&rarr;</a>" +
+                                           "</div>" +
+                                           "<img src='Images/3DHoverEffects/3.jpg' />" +
+                                           "</div>" +
+                                       "</div>"
+                        )
+                        }
+                        $('#grid').hoverfold();
+                        $("#grid").append(items);
                     });
-                });
-
+                   // $('#grid').hoverfold();
+                }
+                $(document).ready(init);
+                
             </script>
         }
 
