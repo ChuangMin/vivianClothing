@@ -199,15 +199,16 @@
                     //init limit time sell nav
                     //init limit time sell slide
                     //init product list nav
-                    //init product list 
+                    //init product list
                     getProductlist(1);
                 }
 
                 function getProductlist(id) {               
                     //clear
-                    $('#grid').empty();
+                    //$('#grid').empty();
+                    $('.view').remove();
                     //get data and fillin 
-                    $.getJSON("api/ProductCategory/"+id, function (data) {
+                    $.getJSON("api/ProductCategory/" + id, function (data) {
                         var items = [];
                         //TODO:replace for (var i = 0; i < data.Products.length; i++) { 
                         for (var i = 0; i < 9; i++) {
@@ -220,12 +221,11 @@
                                            "<img src='Images/3DHoverEffects/3.jpg' />" +
                                            "</div>" +
                                        "</div>"
-                        )
-                        }
-                        $('#grid').hoverfold();
+                        ) }
+                       
                         $("#grid").append(items);
                     });
-                   // $('#grid').hoverfold();
+                    $('#grid').hoverfold();
                 }
                 $(document).ready(init);
                 
