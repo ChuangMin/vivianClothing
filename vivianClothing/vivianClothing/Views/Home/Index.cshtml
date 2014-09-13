@@ -193,7 +193,7 @@
             @Scripts.Render("~/Scripts/3DHoverEffects/jquery.hoverfold.js")
             <script>
                 
-                function init() {
+                function main() {
                     //init hot sell nav
                     //init hot sell slide
                     //init limit time sell nav
@@ -205,10 +205,9 @@
 
                 function getProductlist(id) {               
                     //clear
-                    //$('#grid').empty();
-                    $('.view').remove();
+                   $('#grid').empty();
                     //get data and fillin 
-                    $.getJSON("api/ProductCategory/" + id, function (data) {
+                    $.getJSON("api/ProductCategory/" + id.toString(), function (data) {
                         var items = [];
                         //TODO:replace for (var i = 0; i < data.Products.length; i++) { 
                         for (var i = 0; i < 9; i++) {
@@ -221,13 +220,13 @@
                                            "<img src='Images/3DHoverEffects/3.jpg' />" +
                                            "</div>" +
                                        "</div>"
-                        ) }
+                        )}
                        
                         $("#grid").append(items);
+                        $('#grid').hoverfold();
                     });
-                    $('#grid').hoverfold();
                 }
-                $(document).ready(init);
+                $(document).ready(main);
                 
             </script>
         }
