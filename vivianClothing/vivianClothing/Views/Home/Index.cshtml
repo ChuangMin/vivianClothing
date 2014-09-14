@@ -20,61 +20,30 @@
     </div>
 
 
-<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation"  style="background-color:#ff69b4; >  
                   <div class="container">
                     <div class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav">
+                      <ul class="nav navbar-nav ProductNav">
                         <li>@Html.ActionLink("新品上市", "Index", "Cart")</li>
                         <li>@Html.ActionLink("熱銷商品", "Index", "Cart")</li>  
                         <li>@Html.ActionLink("限時特價", "Index", "Cart")</li>
+                        <li><a href="javascript:void(0);" onclick="getProductlist(1);">上身</a></li>
+                        <li><a href="javascript:void(0);" onclick="getProductlist(2);">下身</a></li>
+                        <li><a href="javascript:void(0);" onclick="getProductlist(3);">洋裝</a></li>
+                        <li><a href="javascript:void(0);" onclick="getProductlist(4);">內/泳衣</a></li>
+                        <li><a href="javascript:void(0);" onclick="getProductlist(5);">鞋/包</a></li>
+                        <li><a href="javascript:void(0);" onclick="getProductlist(6);">配件</a></li>
+                        <li><a href="javascript:void(0);" onclick="getProductlist(7);">全</a></li>
                       </ul>
                     </div><!-- /.nav-collapse -->
                   </div><!-- /.container -->
                 </div>
 
-@*<div class="row visible-print">
-
-    <div class="col col-sm-3">
-    <img alt="The Vivian Shop" src="//dqz60m88mff11.cloudfront.net/assets/thehublogo-c3f31a6b7407e3c1020b6e1ae1df5db7.png">
-    </div>
-
-    <div class="col col-sm-9">
-        <div class="row">
-        <div class="col col-sm-6">
-        <p>
-        01303 210 311
-        <br>
-        www.thehubcycleshop.co.uk
-        <br>
-        info@thehubcycleshop.co.uk
-        </p>
-        </div>
-        <div class="col col-sm-6">
-        <p>
-        61 - 63 Sandgate High St
-        <br>
-        Sandgate, Folkestone
-        <br>
-        CT20 3AH
-        </p>
-        </div>
-        </div>
-        <div class="row">
-        <div class="col col-sm-12">
-        <p>
-        <strong>Mon - Sat</strong>
-        9:30 am - 5:30 pm
-        <strong>Sunday</strong>
-        10:00 am - 4:00 pm
-        </p>
-        </div>
-        </div>
-        </div>
-
-</div>*@
 
 @*熱銷*@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div>
+    <div style="width:30%; height:100px; float:left; position:relative;" ></div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:70%; float:right;">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -112,9 +81,13 @@
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
+    
+</div>
 
 @*限時搶購*@
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div>
+      <div style="width:30%; height:100px; float:left; position:relative;" ></div>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel"   style="width:70%; float:right;">
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -152,7 +125,7 @@
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
-
+</div>
 
     
 @*<h2>@Html.DisplayNameFor(model => model[0])</h2>*@
@@ -164,12 +137,12 @@
     }
 </ul>*@
 
-<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+@*<div class="navbar navbar-fixed-top navbar-inverse" role="navigation"  style="background-color:#ff69b4;">
                   <div class="container">
                     <div class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav">
-                          <li><a href="javascript:void(0);" onclick="getProductlist(1);">上身</a></li>
-                          <li><a href="javascript:void(0);" onclick="getProductlist(2);">下身</a></li>
+                      <ul class="nav navbar-nav ProductNav">                   
+                          <li><strong><a id="test" href="javascript:void(0);" onclick="getProductlist(1);" style="color:black;font-size:large;">上身</a></strong></li>
+                          <li><a href="javascript:void(0);" onclick="getProductlist(2);" style="color:black;">下身</a></li>
                           <li><a href="javascript:void(0);" onclick="getProductlist(3);">洋裝</a></li>
                           <li><a href="javascript:void(0);" onclick="getProductlist(4);">內/泳衣</a></li>
                           <li><a href="javascript:void(0);" onclick="getProductlist(5);">鞋/包</a></li>
@@ -182,13 +155,11 @@
     
     
     
-</div>
+</div>*@
 
 <div id="grid" class="main" style="width: 1050px;overflow:visible"; >
-				
-
+			
 </div>
-
         @section scripts{
             @Scripts.Render("~/Scripts/3DHoverEffects/jquery.hoverfold.js")
             <script>
@@ -198,11 +169,29 @@
                     //init hot sell slide
                     //init limit time sell nav
                     //init limit time sell slide
-                    //init product list nav
-                    //init product list
+
+                    //init product for nav
+                   // getProductCategory();
+                  
+                    //init product for list
                     getProductlist(1);
                 }
-
+                function getProductCategory() {
+                    $.getJSON("api/ProductCategory" , function (data) {
+                        var items = [];                  
+                        for (var i = 0; i < 4; i++) {                        
+                            items.push("<li class='ProductNavList'>" +
+                                            "<a href='javascript:void(0);' " +
+                                                "onclick='getProductlist(" + data[i]["Id"] +");'>" +
+                                                data[i]["Name"] +
+                                            "</a>" +
+                                        "</li>"
+                           )
+                        }
+                        $(".ProductNav").append(items);
+                    });
+                
+                }
                 function getProductlist(id) {               
                     //clear
                    $('#grid').empty();
@@ -215,7 +204,7 @@
                                            "<div class='view-back'>" +
                                            "<span data-icon='A'> Name: " + data.Products[i]["Name"] + "</span>" +
                                            "<span data-icon='B'> Price :" + data.Products[i]["Price"] + "</span>" +
-                                           "<a href='http://www.flickr.com/photos/ag2r/6271521984/in/photostream'>&rarr;</a>" +
+                                           "<a href='/Home/ProductDetail/" + data.Products[i]["Id"] + "' >&rarr;</a>" +
                                            "</div>" +
                                            "<img src='Images/3DHoverEffects/3.jpg' />" +
                                            "</div>" +
