@@ -57,5 +57,5 @@
     </div>
 </fieldset>
 <p>
-    @Ajax.ActionLink("加入購物車","AddToCart","Cart",ajaxOption)
+    @Ajax.ActionLink("加入購物車","AddToCart","Cart", new { ProductId = Model.Id },ajaxOption)
 </p>
