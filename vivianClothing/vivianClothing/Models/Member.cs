@@ -21,7 +21,7 @@ namespace vivianClothing.Models
         [Description("我們將會以您的E-mail作為登入帳號")]
         [MaxLength(250,ErrorMessage="不能超過250個字")]
         [DataType(DataType.EmailAddress)]
-        [Remote("CheckDup","Member",HttpMethod="post",ErrorMessage="您輸入的Email已經有人註冊過了")]
+        [Remote("CheckDup","Member",HttpMethod="POST",ErrorMessage="您輸入的Email已經有人註冊過了")]
         public string Email { get; set; }
 
 

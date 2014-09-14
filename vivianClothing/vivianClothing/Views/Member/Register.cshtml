@@ -5,7 +5,6 @@
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
-
     <fieldset>
         <legend>Member</legend>
 
@@ -34,7 +33,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="註冊" />
         </p>
     </fieldset>
 }
@@ -46,7 +45,24 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
     <script>
-      
-
+        $.validator.messages = {
+            required: "this field ",
+            remote: "please fix this field",
+            email: "請輸入Email地址",
+            url: "Please enter a valid URL",
+            date: "please enter a valid date",
+            dateISO: "please enter a valid dateISO",
+            number: "please enter a valid number",
+            digits: "please enter only only digits",
+            creditcard: "please enter a valid credit card number",
+            equalTO: "please enter a same value again",
+            accept: "please enter a value with a valid extension",
+            maxlength: $.validator.format("please enter no more than {0} characters."),
+            minlength: $.validator.format("please enter atlease than {0} characters."),
+            rangelength: $.validator.format("please enter a value between {0} and {1} characters long."),
+            range: $.validator.format("please enter a value between {0} and {1}  ."),
+            max: $.validator.format("please enter a value less than or eualto {0} long."),
+            min: $.validator.format("please enter a value greater than or eualto {0} long.")
+        };
     </script>
 }

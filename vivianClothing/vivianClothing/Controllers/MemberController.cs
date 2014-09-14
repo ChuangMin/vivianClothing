@@ -126,7 +126,9 @@ namespace vivianClothing.Controllers
         {
             var hash_pw = FormsAuthentication.HashPasswordForStoringInConfigFile(pwSalt + password, "SHA1");
 
-            var member = (from p in db.Member where p.Email == email && p.Password == hash_pw select p).FirstOrDefault();
+            var member = (from p in db.Member 
+                           where p.Email == email && p.Password == hash_pw 
+                           select p).FirstOrDefault();
 
             if (member!=null)
             {
@@ -175,7 +177,7 @@ namespace vivianClothing.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult checkDup(string email)
+        public ActionResult CheckDup(string email)
         {
             var member = db.Member.Where(p => p.Email == email).FirstOrDefault();
 

@@ -31,28 +31,13 @@ namespace vivianClothing.Controllers
                 //};
 
                  //TODO:insert test Data to database
-                db.ProductCategories.Add(new ProductCategory() { Id = 1, Name = "工具" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 2, Name = "禮品" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 3, Name = "書籍" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 4, Name = "美勞用具" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 5, Name = "美勞用具1" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 6, Name = "美勞用具2" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 7, Name = "美勞用具3" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 8, Name = "美勞用具4" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 9, Name = "美勞用具5" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 10, Name = "美勞用具6" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 11, Name = "美勞用具7" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 12, Name = "美勞用具8" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 13, Name = "美勞用具9" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 14, Name = "美勞用1" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 15, Name = "美勞用2" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 16, Name = "美勞用3" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 17, Name = "美勞用4" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 18, Name = "美勞用5" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 19, Name = "美勞用6" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 20, Name = "美勞用7" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 21, Name = "美勞用8" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 22, Name = "美勞用9" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 1, Name = "上身" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 2, Name = "下身" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 3, Name = "洋裝" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 4, Name = "內/泳衣" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 5, Name = "鞋/包" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 6, Name = "配件" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 7, Name = "全" });
 
                 db.SaveChanges();
 
