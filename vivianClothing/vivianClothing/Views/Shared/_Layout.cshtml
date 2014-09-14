@@ -38,14 +38,13 @@
                 </div><!-- /.navbar -->
         </header>
 
-        <div id="body" style="background-color:black">       
+        <div id="body">       
             @RenderSection("featured", required: false)
       
-                @RenderBody()
-           
+            @RenderBody()
         </div>
 
-        <footer class="footer hidden-print"  style="background-color: #eee;">          
+       @* <footer class="footer hidden-print"  style="background-color: #eee;">          
             <div class="container">
                 <div class="row">
                     <div class="col col-lg-4 col-sm-12">
@@ -122,14 +121,13 @@
                     <p>&copy; @DateTime.Now.Year - Vivian 小舖</p>
                 </div>
             </div>
-            </footer>
+            </footer>*@
             
     
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/Scripts/bootstrap.js")
-        @Scripts.Render("~/Scripts/jquery.cycle2.js")
         @Scripts.Render("~/Scripts/3DHoverEffects/jquery.hoverfold.js")
 
        

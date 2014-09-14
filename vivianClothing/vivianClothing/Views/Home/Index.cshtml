@@ -4,14 +4,13 @@
     ViewBag.Title = "Index";
 }
 
-@Styles.Render("~/Content/PhotoSlide.css")
 @Styles.Render("~/Content/3DHoverEffects/demo.css")
 @Styles.Render("~/Content/3DHoverEffects/style_common.css")
 @Styles.Render("~/Content/3DHoverEffects/style2.css")
+@Styles.Render("~/Content/photoslideshow.css")
 
 
-
-<div id="content" class="bs-docs-header">
+    <div id="content" class="bs-docs-header" style="background-color:black">
       <div class="container">
         <h1>52SH</h1>
         <p>簡介</p>
@@ -19,8 +18,7 @@
       </div>
     </div>
 
-
-<div class="navbar navbar-fixed-top navbar-inverse" role="navigation"  style="background-color:#ff69b4; >  
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation"  style="background-color:#ff69b4; >  
                   <div class="container">
                     <div class="collapse navbar-collapse">
                       <ul class="nav navbar-nav ProductNav">
@@ -39,127 +37,224 @@
                   </div><!-- /.container -->
                 </div>
 
+    @*熱銷*@
+    <div style="background-color:black">
 
-@*熱銷*@
-<div>
-    <div style="width:30%; height:100px; float:left; position:relative;" ></div>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width:70%; float:right;">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-      </ol>
-      <div class="carousel-inner">
-
-        <div class="item active">
-          <img src="Images/powerbar.png" alt="First slide" style="width:1200px;height:600px;margin:auto;">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+    <div class="slider">
+      <div class="slide active-slide">
+        <div class="photocontainer">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Flipboard Is Your Personal Magazine</h1>
+              <p>It's a single place to discover, collect and share the news you care about.  Add your favorite social networks, publications and blogs to stay connected to the topics and people closest to you.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/home.png" style="width:540px;">
             </div>
           </div>
-        </div>
-
-        @for (int i = 0; i < 3; i++)
-        {
-          <div class="item">
-          <img src="Images/ABC.png" alt="Third slide" style="width:1200px;height:600px;margin:auto;">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>  
-        }
-       
+        </div>      
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
+        <div class="slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Badges & Widgets</h1>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/bw.png" style="width:540px;">
+            </div>
+          </div>
+        </div>      
+      </div> 
+
+      <div class="slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Badges & Widgets</h1>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/home.png" style="width:540px;">
+            </div>
+          </div>
+        </div>      
+      </div> 
+
+      <div class="slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Badges & Widgets</h1>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/bw.png" style="width:540px;">
+            </div>
+          </div>
+        </div>      
+      </div> 
+
     </div>
+
+    <div class="slider-nav">
+      <a href="javascript:void(0);" class="arrow-prev"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+      <ul class="slider-dots">
+        <li class="dot active-dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+      </ul>
+      <a href="javascript:void(0);" class="arrow-next"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+    </div> 
     
-</div>
+   
 
-@*限時搶購*@
-<div>
-      <div style="width:30%; height:100px; float:left; position:relative;" ></div>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel"   style="width:70%; float:right;">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-      </ol>
-      <div class="carousel-inner">
+    @*限時搶購*@
+    <div>
 
-        <div class="item active">
-          <img src="Images/powerbar.png" alt="First slide" style="width:1200px;height:600px;margin:auto;">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+        <div class="slider2">
+      <div class="slide2 active-slide">
+        <div class="photocontainer2">
+          <div class="row">
+            <div class="slide-copy2 col-xs-5">
+              <h1>Flipboard Is Your Personal Magazine</h1>
+              <p>It's a single place to discover, collect and share the news you care about.  Add your favorite social networks, publications and blogs to stay connected to the topics and people closest to you.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img2 col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/home.png" style="width:540px;">
             </div>
           </div>
-        </div>
-
-        @for (int i = 0; i < 3; i++)
-        {
-          <div class="item">
-          <img src="Images/ABC.png" alt="Third slide" style="width:1200px;height:600px;margin:auto;">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>  
-        }
-       
+        </div>      
       </div>
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
+        <div class="slide2">
+        <div class="photocontainer2">
+          <div class="row">
+            <div class="slide-copy2 col-xs-5">
+              <h1>Badges & Widgets</h1>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img2 col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/bw.png" style="width:540px;">
+            </div>
+          </div>
+        </div>      
+      </div> 
+
+      <div class="slide2">
+        <div class="photocontainer2">
+          <div class="row">
+            <div class="slide-copy2 col-xs-5">
+              <h1>Badges & Widgets</h1>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img2 col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/home.png" style="width:540px;">
+            </div>
+          </div>
+        </div>      
+      </div> 
+
+      <div class="slide2">
+        <div class="photocontainer2">
+          <div class="row">
+            <div class="slide-copy2 col-xs-5">
+              <h1>Badges & Widgets</h1>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img2 col-xs-7">
+              <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/bw.png" style="width:540px;">
+            </div>
+          </div>
+        </div>      
+      </div> 
+
     </div>
-</div>
 
+        <div class="slider-nav2">
+      <a href="javascript:void(0);" class="arrow-prev2"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+      <ul class="slider-dots2">
+        <li class="dot2 active-dot2">&bull;</li>
+        <li class="dot2">&bull;</li>
+        <li class="dot2">&bull;</li>
+        <li class="dot2">&bull;</li>
+      </ul>
+      <a href="javascript:void(0);" class="arrow-next2"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+    </div> 
     
-@*<h2>@Html.DisplayNameFor(model => model[0])</h2>*@
+    </div>
 
-@*<ul>
-    @foreach (var item in Model)
-    {
-        <li>@Html.ActionLink(item.Name, "ProductList", new {id = item.Id })</li>
-    }
-</ul>*@
+   
 
-@*<div class="navbar navbar-fixed-top navbar-inverse" role="navigation"  style="background-color:#ff69b4;">
-                  <div class="container">
-                    <div class="collapse navbar-collapse">
-                      <ul class="nav navbar-nav ProductNav">                   
-                          <li><strong><a id="test" href="javascript:void(0);" onclick="getProductlist(1);" style="color:black;font-size:large;">上身</a></strong></li>
-                          <li><a href="javascript:void(0);" onclick="getProductlist(2);" style="color:black;">下身</a></li>
-                          <li><a href="javascript:void(0);" onclick="getProductlist(3);">洋裝</a></li>
-                          <li><a href="javascript:void(0);" onclick="getProductlist(4);">內/泳衣</a></li>
-                          <li><a href="javascript:void(0);" onclick="getProductlist(5);">鞋/包</a></li>
-                          <li><a href="javascript:void(0);" onclick="getProductlist(6);">配件</a></li>
-                          <li><a href="javascript:void(0);" onclick="getProductlist(7);">全</a></li>
-                     </ul>
-                    </div><!-- /.nav-collapse -->
-                  </div><!-- /.container -->
-               
-    
-    
-    
-</div>*@
+    @*9宮格*@
+    <div id="grid" class="main" style="width: 1050px;overflow:visible"; >	
+        		
+    </div>
 
-<div id="grid" class="main" style="width: 1050px;overflow:visible"; >
-			
-</div>
+     </div>
+
+
+
+@*javascript section*@
         @section scripts{
             @Scripts.Render("~/Scripts/3DHoverEffects/jquery.hoverfold.js")
             <script>
@@ -172,10 +267,87 @@
 
                     //init product for nav
                    // getProductCategory();
-                  
+                   
+                    photoslideshow();
                     //init product for list
                     getProductlist(1);
                 }
+                function photoslideshow() {
+                        $('.arrow-next').click(function () {
+                            var currentSlide = $('.active-slide');
+                            var nextSlide = currentSlide.next();
+
+                            var currentDot = $('.active-dot');
+                            var nextDot = currentDot.next();
+
+                            if (nextSlide.length == 0) {
+                                nextSlide = $('.slide').first();
+                                nextDot = $('.dot').first();
+                            }
+                            currentSlide.fadeOut(600).removeClass('active-slide');
+                            nextSlide.fadeIn(600).addClass('active-slide');
+
+                            currentDot.removeClass('active-dot');
+                            nextDot.addClass('active-dot');
+                        });
+
+                        $('.arrow-prev').click(function () {
+                            var currentSlide = $('.active-slide');
+                            var prevSlide = currentSlide.prev();
+
+                            var currentDot = $('.active-dot');
+                            var prevDot = currentDot.prev();
+
+                            if (prevSlide.length == 0) {
+                                prevSlide = $('.slide').last();
+                                prevDot = $('.dot').last();
+                            }
+                            currentSlide.fadeOut(600).removeClass('active-slide');
+                            prevSlide.fadeIn(600).addClass('active-slide');
+
+                            currentDot.removeClass('active-dot');
+                            prevDot.addClass('active-dot');
+                        });
+                        
+                        $('.arrow-next2').click(function () {
+                            var currentSlide = $('.active-slide2');
+                            var nextSlide = currentSlide.next();
+
+                            var currentDot = $('.active-dot2');
+                            var nextDot = currentDot.next();
+
+                            if (nextSlide.length == 0) {
+                                nextSlide = $('.slide2').first();
+                                nextDot = $('.dot2').first();
+                            }
+                            currentSlide.fadeOut(600).removeClass('active-slide2');
+                            nextSlide.fadeIn(600).addClass('active-slide2');
+
+                            currentDot.removeClass('active-dot2');
+                            nextDot.addClass('active-dot2');
+                        });
+
+                        $('.arrow-prev2').click(function () {
+                            var currentSlide = $('.active-slide2');
+                            var prevSlide = currentSlide.prev();
+
+                            var currentDot = $('.active-dot2');
+                            var prevDot = currentDot.prev();
+
+                            if (prevSlide.length == 0) {
+                                prevSlide = $('.slide2').last();
+                                prevDot = $('.dot2').last();
+                            }
+                            currentSlide.fadeOut(600).removeClass('active-slide2');
+                            prevSlide.fadeIn(600).addClass('active-slide2');
+
+                            currentDot.removeClass('active-dot2');
+                            prevDot.addClass('active-dot2');
+                        });
+
+                        setInterval("$('.arrow-next').trigger('click');", 3000);
+                        setInterval("$('.arrow-next2').trigger('click');", 4000);
+                    }
                 function getProductCategory() {
                     $.getJSON("api/ProductCategory" , function (data) {
                         var items = [];                  
@@ -219,8 +391,3 @@
                 
             </script>
         }
-
-
-
-
-
