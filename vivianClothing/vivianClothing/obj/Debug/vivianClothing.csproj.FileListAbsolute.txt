@@ -265,7 +265,6 @@ C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivia
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing\bin\ru\System.Spatial.resources.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing\bin\zh-Hant\System.Spatial.resources.dll
-C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing\obj\Debug\vivianClothing.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing\obj\Debug\vivianClothing.dll
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing\obj\Debug\vivianClothing.pdb
 C:\Users\Administrator\Dropbox\coding\vivian\vivianClothing\vivianClothing\vivianClothing\obj\Debug\vivianClothing.Migrations.InitialCreate.resources
