@@ -9,7 +9,6 @@
 @Styles.Render("~/Content/3DHoverEffects/style2.css")
 @Styles.Render("~/Content/photoslideshow.css")
 
-
     <div id="content" class="bs-docs-header" style="background-color:black">
       <div class="container">
         <h1>52SH</h1>
@@ -25,13 +24,6 @@
                         <li>@Html.ActionLink("新品上市", "Index", "Cart")</li>
                         <li>@Html.ActionLink("熱銷商品", "Index", "Cart")</li>  
                         <li>@Html.ActionLink("限時特價", "Index", "Cart")</li>
-                        <li><a href="javascript:void(0);" onclick="getProductlist(1);">上身</a></li>
-                        <li><a href="javascript:void(0);" onclick="getProductlist(2);">下身</a></li>
-                        <li><a href="javascript:void(0);" onclick="getProductlist(3);">洋裝</a></li>
-                        <li><a href="javascript:void(0);" onclick="getProductlist(4);">內/泳衣</a></li>
-                        <li><a href="javascript:void(0);" onclick="getProductlist(5);">鞋/包</a></li>
-                        <li><a href="javascript:void(0);" onclick="getProductlist(6);">配件</a></li>
-                        <li><a href="javascript:void(0);" onclick="getProductlist(7);">全</a></li>
                       </ul>
                     </div><!-- /.nav-collapse -->
                   </div><!-- /.container -->
@@ -141,9 +133,7 @@
    
 
     @*限時搶購*@
-    <div>
-
-        <div class="slider2">
+    <div class="slider2">
       <div class="slide2 active-slide">
         <div class="photocontainer2">
           <div class="row">
@@ -230,7 +220,7 @@
 
     </div>
 
-        <div class="slider-nav2">
+    <div class="slider-nav2">
       <a href="javascript:void(0);" class="arrow-prev2"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
       <ul class="slider-dots2">
         <li class="dot2 active-dot2">&bull;</li>
@@ -240,10 +230,7 @@
       </ul>
       <a href="javascript:void(0);" class="arrow-next2"><img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
     </div> 
-    
-    </div>
-
-   
+ 
 
     @*9宮格*@
     <div id="grid" class="main" style="width: 1050px;overflow:visible"; >	

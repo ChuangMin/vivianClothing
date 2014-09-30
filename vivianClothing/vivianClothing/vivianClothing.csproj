@@ -191,6 +191,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\APIs\ProductCategoryController.cs" />
+    <Compile Include="Controllers\APIs\ProductController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -219,6 +221,7 @@
     <Compile Include="Views\Gusetbook\img.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\3DHoverEffects\bg.jpg" />
     <Content Include="Content\3DHoverEffects\demo.css" />
     <Content Include="Content\3DHoverEffects\fallback.css" />
     <Content Include="Content\3DHoverEffects\fonts\icons.svg" />
@@ -234,7 +237,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\PagedList.css" />
-    <Content Include="Content\PhotoSlide.css" />
+    <Content Include="Content\photoslideshow.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -403,6 +406,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201408100811463_InitialCreate.resx">
       <DependentUpon>201408100811463_InitialCreate.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

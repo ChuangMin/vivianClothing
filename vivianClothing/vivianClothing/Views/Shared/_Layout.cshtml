@@ -21,15 +21,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="#">Vivian 小舖</a>
+                      <a class="navbar-brand" href="#" style="color:black">Vivian 小舖</a>
                     </div>
                     <div class="collapse navbar-collapse">
                       <ul class="nav navbar-nav">
                         <li @*class="active"*@>@Html.ActionLink("首頁", "Index", "Home")</li>
                         <li>@Html.ActionLink("會員中心", "Login", "Member")</li>
-                          @*<li><a class="glyphicon glyphicon-heart" href="/Home/Index">首頁</a></li>
-                          <li><a class="glyphicon glyphicon-heart" href="/Member/Login">會員中心</a></li>*@
-                          <li>@Html.ActionLink("購物流程", "Index", "Cart")</li>
+                      @*<li><a class="glyphicon glyphicon-heart" href="/Home/Index">首頁</a></li>
+                        <li><a class="glyphicon glyphicon-heart" href="/Member/Login">會員中心</a></li>*@
+                        <li>@Html.ActionLink("購物流程", "Index", "Cart")</li>
+                        <li>@Html.ActionLink("購物車", "Index", "Cart")</li>
                         <li>@Html.ActionLink("訂單查詢", "Index", "Cart")</li>
                         <li>@Html.ActionLink("客服", "Index", "Cart")</li>
                       </ul>

@@ -21,23 +21,16 @@ namespace vivianClothing.Controllers
             #if DEBUG
             if (data.Count==0)
             {
-                //TODO: just preview fake data on view
-                //var data = new List<ProductCategory>()
-                //{
-                //    new ProductCategory() {Id = 1, Name = "工具" },
-                //     new ProductCategory() {Id = 2, Name = "禮品" },
-                //      new ProductCategory() {Id = 3, Name = "書籍" },
-                //       new ProductCategory() {Id = 4, Name = "美勞用具" },
-                //};
-
                  //TODO:insert test Data to database
                 db.ProductCategories.Add(new ProductCategory() { Id = 1, Name = "上身" });
                 db.ProductCategories.Add(new ProductCategory() { Id = 2, Name = "下身" });
                 db.ProductCategories.Add(new ProductCategory() { Id = 3, Name = "洋裝" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 4, Name = "內/泳衣" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 5, Name = "鞋/包" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 6, Name = "配件" });
-                db.ProductCategories.Add(new ProductCategory() { Id = 7, Name = "全" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 4, Name = "內" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 5, Name = "泳衣" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 6, Name = "鞋" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 7, Name = "包" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 8, Name = "配件" });
+                db.ProductCategories.Add(new ProductCategory() { Id = 9, Name = "全" });
 
                 db.SaveChanges();
 
