@@ -253,7 +253,7 @@
                     //init limit time sell slide
 
                     //init product for nav
-                   // getProductCategory();
+                    getProductCategory();
                    
                     photoslideshow();
                     //init product for list
@@ -340,8 +340,7 @@
                         var items = [];                  
                         for (var i = 0; i < 4; i++) {                        
                             items.push("<li class='ProductNavList'>" +
-                                            "<a href='javascript:void(0);' " +
-                                                "onclick='getProductlist(" + data[i]["Id"] +");'>" +
+                                            "<a href='/Home/ProductList/" + data[i]["Id"] + "' >" +
                                                 data[i]["Name"] +
                                             "</a>" +
                                         "</li>"
